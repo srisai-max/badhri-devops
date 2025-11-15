@@ -13,7 +13,7 @@ userapp.use((req, res, next) => {
   next()
 })
 
-//create a user
+//create a user (your wish)
 userapp.post('/user', expressAsyncHandler(async (req, res) => {
   let usercred = req.body;
   let existuser = await userscollection.findOne({ username: usercred.username })
